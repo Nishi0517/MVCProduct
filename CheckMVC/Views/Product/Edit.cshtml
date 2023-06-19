@@ -1,0 +1,43 @@
+﻿@model CheckMVC.Models.tblProduct
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit @Model.prod_name</h2>
+
+@using (Html.BeginForm("Edit", "Product", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.HiddenFor(Model=>Model.prod_id)
+    <table>
+        <tr>
+            <td>Enter Product Name:</td>
+            <td>@Html.EditorFor(model => model.prod_name, new { htmlattibutes = new { @class = "form-control" } })</td>
+        </tr>
+        <tr>
+            <td>Enter Product Price:</td>
+            <td>@Html.EditorFor(model => model.prod_price, new { htmlattibutes = new { @class = "form-control" } })</td>
+        </tr>
+        <tr>
+            <td>Enter Product Qty:</td>
+            <td>@Html.EditorFor(model => model.prod_qty, new { htmlattibutes = new { @class = "form-control" } })</td>
+        </tr>
+        <tr>
+            <td>Choose a Product image:</td>
+            <td>
+                <img src="~/Content/Images/@Model.prod_pic" alt="@Model.prod_name" width="100" height="100" />
+                <input type="file" name="postedFile" class="form-control" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" name="submit" value="Update Product" class="btn btn-success" />
+
+            </td>
+        </tr>
+        <tr>
+        </tr>
+    </table>
+}
+
+
+

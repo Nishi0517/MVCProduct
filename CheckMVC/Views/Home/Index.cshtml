@@ -1,0 +1,21 @@
+﻿@model List<CheckMVC.Models.tblProduct>
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<div class="container">
+    <h1>List of Product Available</h1>
+    <div class="row">
+        @foreach (var item in Model)
+            {
+                <div class="col-sm-4">
+                    <img src="~/Content/Images/@item.prod_pic" alt="@item.prod_name" width="150" height="150" />
+                    <span style="display:block" class="h3 text-info">@item.prod_name</span>
+                    <span style="display:block" class="h3 text-info">₹ @item.prod_price per price</span>
+                    <a href="@Url.Action("AddToCart","Cart",new { @ProductID = item.prod_id })" class="btn btn-primary">Add to Cart</a>
+                </div>
+            }
+    </div>
+</div>
