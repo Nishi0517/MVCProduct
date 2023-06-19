@@ -1,0 +1,27 @@
+
+
+remain
+
+<connectionStrings>
+    <add name="ProductDBEntities" connectionString="metadata=res://*/Models.ProductDBModel.csdl|res://*/Models.ProductDBModel.ssdl|res://*/Models.ProductDBModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=(LocalDB)\MSSQLLocalDB;attachdbfilename=|DataDirectory|\ProductDB.mdf;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" providerName="System.Data.EntityClient" />
+  </connectionStrings>
+
+
+
+package 
+
+bootstrap 3.4.1
+EntityFramework 6.2.0
+jQuery 3.4.1
+jQuery.Validation 1.17.0
+Microsoft.AspNet.Mvc 5.2.9
+Microsoft.AspNet.Razor 3.2.9
+Microsoft.AspNet.Web.Optimization 1.1.3
+Microsoft.AspNet.WebPages 3.2.9
+Microsoft.CodeDom.Providers.DotNetCompilerPlatform 2.0.1
+Microsoft.jQuery.Unobtrusive.Validation 3.2.11
+Microsoft.Web.Infrastructure 2.0.1
+Modernizr 2.8.3
+Newtonsoft.Json 12.0.2
+WebGrease 1.6.0
+
